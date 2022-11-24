@@ -36,7 +36,10 @@ console.log('intialvalue',store.getState());
 const unsubscribe1=store.subscribe(()=>console.log("update",store.getState()))
 store.dispatch(buycake())
 store.dispatch(buycake())
-store.dispatch(buycake())
 
+for (let i = 0; i < 8; i++) {
+  store.dispatch(buycake())
+}
+console.log('Out of stock');
 unsubscribe1()
 store.dispatch(buycake())
